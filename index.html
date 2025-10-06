@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Archive Search - RxJS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        #message {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        #message.error {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        #message.info {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        .result-item {
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .result-item h3 {
+            margin: 0 0 10px 0;
+            color: #1a73e8;
+        }
+        .result-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Internet Archive Search</h1>
+    <input type="text" id="searchInput" placeholder="Search the Internet Archive..." />
+    <div id="message"></div>
+    <div id="results"></div>
+
+    <script src="node_modules/rxjs/dist/bundles/rxjs.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
